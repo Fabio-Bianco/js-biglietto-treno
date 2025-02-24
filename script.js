@@ -22,6 +22,11 @@ console.log(parseInt (userAge));
 const costForMiles = 0.21;
 console.log (costForMiles);
 
+// Calcolo il prezzo del biglietto in base ai chilometri da percorrere applicando una tariffa di 0,21 euro al Km;
+
+let costForTicket = milesToGo*costForMiles;
+console.log (milesToGo*costForMiles); 
+
 
 
 
