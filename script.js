@@ -33,6 +33,11 @@ if (quantityAge < 18) {
     ((costForTicket * 40)/100); // Sconto del 40%
 }
 
+// Formattazione del prezzo in valori decimali
+costForTicket = costForTicket.toFixed(2);
+
+// Risultato
+alert(`Il prezzo totale del biglietto è: €${costForTicket}`);
 
     
 
