@@ -9,6 +9,15 @@ console.log(milesToGo);
 const userAge = prompt ('inserisci la tua età');
 console.log(userAge);
 
+//trasformo la variabile 'milesToGo da stringa a valore numerico
+const quantityOne = 'milesToGo';
+console.log(parseInt (milesToGo));
+
+//trasformo la variabile 'milesToGo da stringa a valore numerico
+const quantityTwo = 'userAge';
+console.log(parseInt (userAge));
+
+
 
 
 
