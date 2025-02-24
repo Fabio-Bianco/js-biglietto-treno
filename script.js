@@ -26,18 +26,13 @@ console.log (costForMiles);
 let costForTicket = milesToGo*costForMiles;
 console.log (milesToGo*costForMiles); 
 
-// Applica lo sconto se necessario
+// Applico lo sconto se necessario
 if (quantityAge < 18) {
     ((costForTicket * 20)/100); // Sconto del 20%
 } else if (quantityAge > 65) {
     ((costForTicket * 40)/100); // Sconto del 40%
 }
 
-// Formatta il prezzo con due decimali
-costForTicket = costForTicket.toFixed(2);
-
-// Mostra il risultato
-alert(`Il prezzo totale del biglietto è: €${costForTicket}`);
 
     
 
