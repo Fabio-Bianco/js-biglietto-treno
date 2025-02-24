@@ -12,7 +12,8 @@
 - Chiedo all'utente l'età e la salvo in una variabile;
 - Trasformo la variabile 'chilometri da percorrere' da stringa in numero;
 - Trasformo la variabile 'età dell'utente' da stringa in numero;
-- calcolo il prezzo del biglietto in base ai chilometri da percorrere applicando una  tariffa di 0,21 euro al Km;
+- Creo una variabile (const) che indica la tariffa al KM;
+- Calcolo il prezzo del biglietto in base ai chilometri da percorrere applicando una  tariffa di 0,21 euro al Km;
 - SE l'utente è minorenne: 
     - viene applicato uno sconto del 20%;
 - SE l'untente è over 65:
