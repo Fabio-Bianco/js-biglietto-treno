@@ -1,46 +1,40 @@
+// Chiedo all'utente i chilometri da percorrere
+const milesToGo = prompt('Inserisci i chilometri di distanza che ti separano dalla tua destinazione');
+const userAge = prompt('Inserisci la tua Età');
 
+// Converto i valori in numeri
+let quantityMiles = parseFloat(milesToGo);
+let quantityAge = parseInt(userAge);
 
+// Controllo validità dei dati
+if (isNaN(quantityMiles) || isNaN(quantityAge)) {
+    alert("I dati inseriti non sono validi");
+} else {
+    // Tariffa per KM
+    const costForMiles = 0.21;
 
+    // Calcolo il prezzo del biglietto
+    let costForTicket = costForMiles * quantityMiles;
 
-//Chiedo all'utente i chilometri da percorrere e li salvo in una variabile (milesToGo);
-const milesToGo = prompt ('Inserisci i chilometri di distanza che ti separano dalla tua destinazione');
-console.log(milesToGo);
+    // Sconto in base all'età
+    let discountPercentage = 0;
 
-//Chiedo all'utente l'età e la salvo in una variabile (userAge);
-const userAge = prompt ('Inserisci la tua Età');
-console.log(userAge);
+    if (quantityAge < 18) {
+        discountPercentage = 20;
+    } else if (quantityAge >= 65) {
+        discountPercentage = 40;
+    }
 
-//Creo la variabile 'quantityMiles' che converte  la variabile 'milesToGo' da stringa a valore numerico;
-let quantityMiles = 'milesToGo';
-console.log(parseInt (milesToGo));
+    // Calcolo dello sconto
+    let discountAmount = (costForTicket * discountPercentage) / 100;
+    costForTicket -= discountAmount;
 
-//Creo la variabile 'quantityAge' che converte  la variabile 'userAge' da stringa a valore numerico;
-let quantityAge = 'userAge';
-console.log(parseInt (userAge));
+    // Formattazione del prezzo
+    costForTicket = Number(costForTicket.toFixed(2));
 
-// Creo una variabile che indica il la tariffa per ognio KM percorso
-const costForMiles = 0.21;
-console.log (costForMiles);
-
-// Calcolo il prezzo del biglietto in base ai chilometri da percorrere applicando una tariffa di 0,21 euro al Km;
-let costForTicket = milesToGo*costForMiles;
-console.log (milesToGo*costForMiles); 
-
-// Applico lo sconto se necessario
-if (quantityAge < 18) {
-    ((costForTicket * 20)/100); // Sconto del 20%
-} else if (quantityAge > 65) {
-    ((costForTicket * 40)/100); // Sconto del 40%
+    // Risultato
+    alert(`Il prezzo totale del biglietto è: €${costForTicket}`);
 }
-
-// Formattazione del prezzo in valori decimali
-costForTicket = costForTicket.toFixed(2);
-
-// Risultato
-alert(`Il prezzo totale del biglietto è: €${costForTicket}`);
-
-    
-
 
 
 
